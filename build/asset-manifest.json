@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/ariefadvani/SIKOLA/static/css/main.5868b490.chunk.css",
+    "main.js": "/ariefadvani/SIKOLA/static/js/main.81d2cae4.chunk.js",
+    "main.js.map": "/ariefadvani/SIKOLA/static/js/main.81d2cae4.chunk.js.map",
+    "runtime-main.js": "/ariefadvani/SIKOLA/static/js/runtime-main.6947e9e9.js",
+    "runtime-main.js.map": "/ariefadvani/SIKOLA/static/js/runtime-main.6947e9e9.js.map",
+    "static/css/2.08be0173.chunk.css": "/ariefadvani/SIKOLA/static/css/2.08be0173.chunk.css",
+    "static/js/2.8188f96b.chunk.js": "/ariefadvani/SIKOLA/static/js/2.8188f96b.chunk.js",
+    "static/js/2.8188f96b.chunk.js.map": "/ariefadvani/SIKOLA/static/js/2.8188f96b.chunk.js.map",
+    "static/js/3.df1b9162.chunk.js": "/ariefadvani/SIKOLA/static/js/3.df1b9162.chunk.js",
+    "static/js/3.df1b9162.chunk.js.map": "/ariefadvani/SIKOLA/static/js/3.df1b9162.chunk.js.map",
+    "static/js/4.447377ee.chunk.js": "/ariefadvani/SIKOLA/static/js/4.447377ee.chunk.js",
+    "static/js/4.447377ee.chunk.js.map": "/ariefadvani/SIKOLA/static/js/4.447377ee.chunk.js.map",
+    "static/js/5.8e256375.chunk.js": "/ariefadvani/SIKOLA/static/js/5.8e256375.chunk.js",
+    "static/js/5.8e256375.chunk.js.map": "/ariefadvani/SIKOLA/static/js/5.8e256375.chunk.js.map",
+    "static/js/6.d30de21e.chunk.js": "/ariefadvani/SIKOLA/static/js/6.d30de21e.chunk.js",
+    "static/js/6.d30de21e.chunk.js.map": "/ariefadvani/SIKOLA/static/js/6.d30de21e.chunk.js.map",
+    "static/js/7.13755637.chunk.js": "/ariefadvani/SIKOLA/static/js/7.13755637.chunk.js",
+    "static/js/7.13755637.chunk.js.map": "/ariefadvani/SIKOLA/static/js/7.13755637.chunk.js.map",
+    "static/js/8.ebd00fcb.chunk.js": "/ariefadvani/SIKOLA/static/js/8.ebd00fcb.chunk.js",
+    "static/js/8.ebd00fcb.chunk.js.map": "/ariefadvani/SIKOLA/static/js/8.ebd00fcb.chunk.js.map",
+    "index.html": "/ariefadvani/SIKOLA/index.html",
+    "precache-manifest.6b6e01a9346fe7d0b6e7172f86117b99.js": "/ariefadvani/SIKOLA/precache-manifest.6b6e01a9346fe7d0b6e7172f86117b99.js",
+    "service-worker.js": "/ariefadvani/SIKOLA/service-worker.js",
+    "static/css/2.08be0173.chunk.css.map": "/ariefadvani/SIKOLA/static/css/2.08be0173.chunk.css.map",
+    "static/css/main.5868b490.chunk.css.map": "/ariefadvani/SIKOLA/static/css/main.5868b490.chunk.css.map",
+    "static/media/flaticon.css": "/ariefadvani/SIKOLA/static/media/Flaticon2.eafcbac0.ttf",
+    "static/media/ki.css": "/ariefadvani/SIKOLA/static/media/Ki.8f9a1a6c.woff",
+    "static/media/all.min.css": "/ariefadvani/SIKOLA/static/media/fa-solid-900.ec763292.svg",
+    "static/media/socicon.css": "/ariefadvani/SIKOLA/static/media/socicon.a35b6574.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6947e9e9.js",
+    "static/css/2.08be0173.chunk.css",
+    "static/js/2.8188f96b.chunk.js",
+    "static/css/main.5868b490.chunk.css",
+    "static/js/main.81d2cae4.chunk.js"
+  ]
+}
