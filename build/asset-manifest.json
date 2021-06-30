@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ariefadvani/SIKOLA/static/css/main.5868b490.chunk.css",
-    "main.js": "/ariefadvani/SIKOLA/static/js/main.81d2cae4.chunk.js",
-    "main.js.map": "/ariefadvani/SIKOLA/static/js/main.81d2cae4.chunk.js.map",
+    "main.js": "/ariefadvani/SIKOLA/static/js/main.1882c25f.chunk.js",
+    "main.js.map": "/ariefadvani/SIKOLA/static/js/main.1882c25f.chunk.js.map",
     "runtime-main.js": "/ariefadvani/SIKOLA/static/js/runtime-main.6947e9e9.js",
     "runtime-main.js.map": "/ariefadvani/SIKOLA/static/js/runtime-main.6947e9e9.js.map",
     "static/css/2.08be0173.chunk.css": "/ariefadvani/SIKOLA/static/css/2.08be0173.chunk.css",
@@ -21,7 +21,7 @@
     "static/js/8.ebd00fcb.chunk.js": "/ariefadvani/SIKOLA/static/js/8.ebd00fcb.chunk.js",
     "static/js/8.ebd00fcb.chunk.js.map": "/ariefadvani/SIKOLA/static/js/8.ebd00fcb.chunk.js.map",
     "index.html": "/ariefadvani/SIKOLA/index.html",
-    "precache-manifest.6b6e01a9346fe7d0b6e7172f86117b99.js": "/ariefadvani/SIKOLA/precache-manifest.6b6e01a9346fe7d0b6e7172f86117b99.js",
+    "precache-manifest.762df8017876c968bf96504990ec02a4.js": "/ariefadvani/SIKOLA/precache-manifest.762df8017876c968bf96504990ec02a4.js",
     "service-worker.js": "/ariefadvani/SIKOLA/service-worker.js",
     "static/css/2.08be0173.chunk.css.map": "/ariefadvani/SIKOLA/static/css/2.08be0173.chunk.css.map",
     "static/css/main.5868b490.chunk.css.map": "/ariefadvani/SIKOLA/static/css/main.5868b490.chunk.css.map",
@@ -35,6 +35,6 @@
     "static/css/2.08be0173.chunk.css",
     "static/js/2.8188f96b.chunk.js",
     "static/css/main.5868b490.chunk.css",
-    "static/js/main.81d2cae4.chunk.js"
+    "static/js/main.1882c25f.chunk.js"
   ]
 }

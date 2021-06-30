@@ -10,9 +10,9 @@ export default [
     refreshToken: "access-token-f8c137a2c98743f48b643e71161d90aa",
     roles: [1], // Administrator
     pic: toAbsoluteUrl("/media/users/300_25.jpg"),
-    fullname: "Sean",
-    occupation: "CEO",
-    companyName: "Keenthemes",
+    fullname: "Andi Rahman",
+    occupation: "",
+    companyName: "KEMENPORA",
     phone: "456669067890",
     address: {
       addressLine: "L-12-20 Vertex, Cybersquare",

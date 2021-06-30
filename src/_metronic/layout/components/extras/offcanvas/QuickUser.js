@@ -50,9 +50,9 @@ export function QuickUser() {
                   href="#"
                   className="font-weight-bold font-size-h5 text-dark-75 text-hover-primary"
               >
-                James Jones
+                Andi Rahman
               </a>
-              <div className="text-muted mt-1">Application Developer</div>
+              <div className="text-muted mt-1"></div>
               <div className="navi mt-2">
                 <a href="#" className="navi-item">
                 <span className="navi-link p-0 pb-2">
