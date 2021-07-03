@@ -129,11 +129,11 @@ export const PKS = () => {
                                     <Form.Control type="" placeholder="Nama Mitra" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nomer MOU</Form.Label>
+                                    <Form.Label>Nomer PKS</Form.Label>
                                     <Form.Control type="" placeholder="No. PKS" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Judul MOU</Form.Label>
+                                    <Form.Label>Judul PKS</Form.Label>
                                     <Form.Control type="" placeholder="Judul PKS" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
@@ -213,11 +213,11 @@ export const PKS = () => {
                                     <Form.Control type="" placeholder="Nama Mitra" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nomer MOU</Form.Label>
+                                    <Form.Label>Nomer PKS</Form.Label>
                                     <Form.Control type="" placeholder="No. PKS" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Judul MOU</Form.Label>
+                                    <Form.Label>Judul PKS</Form.Label>
                                     <Form.Control type="" placeholder="Judul PKS" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">

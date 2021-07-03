@@ -130,11 +130,11 @@ export const MOU = () => {
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
                                     <Form.Label>Nomer MOU</Form.Label>
-                                    <Form.Control type="" placeholder="No. PKS" />
+                                    <Form.Control type="" placeholder="No. MOU" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
                                     <Form.Label>Judul MOU</Form.Label>
-                                    <Form.Control type="" placeholder="Judul PKS" />
+                                    <Form.Control type="" placeholder="Judul MOU" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
                                     <Form.Label>Lingkup Kegiatan</Form.Label>
@@ -214,11 +214,11 @@ export const MOU = () => {
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
                                     <Form.Label>Nomer MOU</Form.Label>
-                                    <Form.Control type="" placeholder="No. PKS" />
+                                    <Form.Control type="" placeholder="No. MOU" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
                                     <Form.Label>Judul MOU</Form.Label>
-                                    <Form.Control type="" placeholder="Judul PKS" />
+                                    <Form.Control type="" placeholder="Judul MOU" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
                                     <Form.Label>Lingkup Kegiatan</Form.Label>
