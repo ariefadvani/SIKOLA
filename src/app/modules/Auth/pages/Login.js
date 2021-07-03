@@ -18,8 +18,10 @@ import { login } from "../_redux/authCrud";
 */
 
 const initialValues = {
-  email: "admin@demo.com",
-  password: "demo",
+  // email: "admin@gmail.com",
+  // password: "demo",
+  email: "",
+  password: "",
 };
 
 function Login(props) {
@@ -97,7 +99,7 @@ function Login(props) {
           <FormattedMessage id="AUTH.LOGIN.TITLE" />
         </h3>
         <p className="text-muted font-weight-bold">
-          Enter your username and password
+          Masukkan email and password
         </p>
       </div>
       {/* end::Head */}
@@ -167,7 +169,7 @@ function Login(props) {
             disabled={formik.isSubmitting}
             className={`btn btn-primary font-weight-bold px-9 py-4 my-3`}
           >
-            <span>Sign In</span>
+            <span>Log In</span>
             {loading && <span className="ml-3 spinner spinner-white"></span>}
           </button>
         </div>

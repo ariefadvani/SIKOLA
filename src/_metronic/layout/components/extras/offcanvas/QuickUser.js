@@ -40,7 +40,7 @@ export function QuickUser() {
             >
               <div className="symbol-label" style={{
                 backgroundImage: `url(${toAbsoluteUrl(
-                    "/media/users/300_21.jpg"
+                    "/media/users/andirahman.jpg"
                 )})`
               }}/>
               <i className="symbol-badge bg-success"/>
@@ -66,7 +66,7 @@ export function QuickUser() {
                     </span>
                   </span>
                   <span className="navi-text text-muted text-hover-primary">
-                    jm@softplus.com
+                    admin@gmail.com
                   </span>
                 </span>
                 </a>
@@ -78,9 +78,9 @@ export function QuickUser() {
             </div>
           </div>
 
-          <div className="separator separator-dashed mt-8 mb-5"/>
+          {/* <div className="separator separator-dashed mt-8 mb-5"/> */}
 
-          <div className="navi navi-spacer-x-0 p-0">
+          {/* <div className="navi navi-spacer-x-0 p-0">
             <a href="/user/profile" className="navi-item">
               <div className="navi-link">
                 <div className="symbol symbol-40 bg-light mr-3">
@@ -166,11 +166,11 @@ export function QuickUser() {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
 
-          <div className="separator separator-dashed my-7"></div>
+          {/* <div className="separator separator-dashed my-7"></div> */}
 
-          <div>
+          {/* <div>
             <h5 className="mb-5">Recent Notifications</h5>
 
             <div className="d-flex align-items-center bg-light-warning rounded p-5 gutter-b">
@@ -264,7 +264,7 @@ export function QuickUser() {
               +8%
             </span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
   );

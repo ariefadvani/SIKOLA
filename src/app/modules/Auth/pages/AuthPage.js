@@ -30,8 +30,8 @@ export function AuthPage() {
                 <Link to="/" className="flex-column-auto mt-5">
                   <img
                       alt="Logo"
-                      className="max-h-70px"
-                      src={toAbsoluteUrl("/media/logos/logo-letter-1.png")}
+                      className="max-h-300px"
+                      src={toAbsoluteUrl("/media/logos/kemenpora.png")}
                   />
                 </Link>
                 {/* end:: Aside header */}
@@ -39,10 +39,10 @@ export function AuthPage() {
                 {/* start:: Aside content */}
                 <div className="flex-column-fluid d-flex flex-column justify-content-center">
                   <h3 className="font-size-h1 mb-5 text-white">
-                    Welcome to SIKOLA
+                    Selamat Datang di SIKOLA Kemenpora
                   </h3>
                   <p className="font-weight-lighter text-white opacity-80">
-                    Sistem Informasi Kerjasama dan Olahraga
+                    Sistem Informasi Kerjasama dan Olahraga Kemenpora
                   </p>
                 </div>
                 {/* end:: Aside content */}
@@ -62,10 +62,10 @@ export function AuthPage() {
             {/*begin::Content*/}
             <div className="flex-row-fluid d-flex flex-column position-relative p-7 overflow-hidden">
               {/*begin::Content header*/}
-              <div className="position-absolute top-0 right-0 text-right mt-5 mb-15 mb-lg-0 flex-column-auto justify-content-center py-5 px-10">
-                <span className="font-weight-bold text-dark-50">Don't have an account yet?</span>
-                <Link to="/auth/registration" className="font-weight-bold ml-2" id="kt_login_signup">Sign Up!</Link>
-              </div>
+              {/* <div className="position-absolute top-0 right-0 text-right mt-5 mb-15 mb-lg-0 flex-column-auto justify-content-center py-5 px-10">
+                <span className="font-weight-bold text-dark-50">Belum Memiliki Akun ?</span>
+                <Link to="/auth/registration" className="font-weight-bold ml-2" id="kt_login_signup">Registrasi!</Link>
+              </div> */}
               {/*end::Content header*/}
 
               {/* begin::Content body */}

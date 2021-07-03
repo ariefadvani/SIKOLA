@@ -47,12 +47,15 @@ const useStyles = makeStyles(theme => ({
 
 export const PKS = () => {
     const suhbeader = useSubheader();
-    suhbeader.setTitle("Perjanjian Kerjasama");
+    suhbeader.setTitle("PKS");
     const classes = useStyles();
     const [show, setShow] = useState(false);
+    const [show2, setShow2] = useState(false);
 
     const handleClose = () => setShow(false);
+    const handleClose2 = () => setShow2(false);
     const handleShow = () => setShow(true);
+    const handleDocument = () => {}
 
     function alertClicked() {
         alert('You clicked the third ListGroupItem');
@@ -75,6 +78,7 @@ export const PKS = () => {
                             {/* <th>Nilai Yang Sudah Digunakan (Rp)</th> */}
                             <th>Nama dan Unit Tim Pelaksana (PIC)</th>
                             <th>Hasil</th>
+                            <th>Action</th>
                             {/* <th>Prosentase Kemajuan Kegiatan</th> */}
                         </tr>
                     </thead>
@@ -89,6 +93,9 @@ export const PKS = () => {
                             {/* <td>Rp 50.000.000</td> */}
                             <td>Asisten Deputi 3</td>
                             <td><a href="#">Dokumen 1</a></td>
+                            <td>
+                                <Button onClick={() => setShow2(true)} variant="primary">...</Button>
+                            </td>
                             {/* <td>40%</td> */}
                         </tr>
                     </tbody>
@@ -113,19 +120,20 @@ export const PKS = () => {
                             <Form>
                                 <Form.Group controlId="exampleForm.ControlSelect1">
                                     <Form.Label>Nama Mitra</Form.Label>
-                                    <Form.Control as="select">
+                                    {/* <Form.Control as="select">
                                         <option>KONI PUSAT</option>
                                         <option>Kementrian Desa</option>
                                         <option>Kementrian Riset Teknologi dan Pendidikan Kebudayaan</option>
                                         <option>Kementrian Ketenagakerjaan</option>
-                                    </Form.Control>
+                                    </Form.Control> */}
+                                    <Form.Control type="" placeholder="Nama Mitra" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nomer PKS</Form.Label>
+                                    <Form.Label>Nomer MOU</Form.Label>
                                     <Form.Control type="" placeholder="No. PKS" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Judul PKS</Form.Label>
+                                    <Form.Label>Judul MOU</Form.Label>
                                     <Form.Control type="" placeholder="Judul PKS" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
@@ -173,7 +181,96 @@ export const PKS = () => {
                     </Row>
                 </Modal.Body>
                 <Modal.Footer>
+                    <Button variant="danger" onClick={handleClose}>Batal</Button>
                     <Button onClick={handleClose}>Simpan</Button>
+                </Modal.Footer>
+            </Modal>
+
+            <Modal
+                // {...this.props}
+                show={show2}
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                        Edit PKS
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Row>
+                        <Col>
+                            <Form>
+                                <Form.Group controlId="exampleForm.ControlSelect1">
+                                    <Form.Label>Nama Mitra</Form.Label>
+                                    {/* <Form.Control as="select">
+                                        <option>KONI PUSAT</option>
+                                        <option>Kementrian Desa</option>
+                                        <option>Kementrian Riset Teknologi dan Pendidikan Kebudayaan</option>
+                                        <option>Kementrian Ketenagakerjaan</option>
+                                    </Form.Control> */}
+                                    <Form.Control type="" placeholder="Nama Mitra" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Nomer MOU</Form.Label>
+                                    <Form.Control type="" placeholder="No. PKS" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Judul MOU</Form.Label>
+                                    <Form.Control type="" placeholder="Judul PKS" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Lingkup Kegiatan</Form.Label>
+                                    <Form.Control type="" placeholder="Lingkup Kegiatan" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlSelect1">
+                                    <Form.Label>Periode Kerjasama</Form.Label>
+                                    <Form.Control as="select">
+                                        <option>2020 - 2021</option>
+                                        <option>2021 - 2022</option>
+                                        <option>2022 - 2023</option>
+                                        <option>2023 - 2024</option>
+                                    </Form.Control>
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Nama PIC</Form.Label>
+                                    <Form.Control type="" placeholder="Nama PIC" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Nilai Kerjasama (Rp)</Form.Label>
+                                    <Form.Control type="" placeholder="Nilai Kerjasama (Rp)" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Sumber Pendanaan</Form.Label>
+                                    <Form.Control type="" placeholder="Sumber Pendanaan" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Upload Dokumen</Form.Label>
+                                    <Button className="ml-10" onClick={handleClose}>+</Button>
+                                </Form.Group>
+                            </Form>
+                        </Col>
+                    </Row>
+                    <Row>
+
+                    </Row>
+                    <Row className={'mt-10'}>
+                        {/* <Col>
+                            <h4>Perkiraan HNA</h4>
+                            <hr />
+                            <h5>Rp 15.000/Capsule</h5>
+                        </Col>
+                        <Col>
+                            <h4>Perkiraan HJA</h4>
+                            <hr />
+                            <h5>Rp 14.000/Capsule</h5>
+                        </Col> */}
+                    </Row>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="danger" onClick={handleClose2}>Batal</Button>
+                    <Button onClick={handleClose2}>Simpan</Button>
                 </Modal.Footer>
             </Modal>
         </div>
