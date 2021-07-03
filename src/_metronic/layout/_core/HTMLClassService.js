@@ -98,7 +98,7 @@ export class HtmlClassService {
     if (brandSkin === "light") {
       return toAbsoluteUrl("/media/logos/kemenpora.png");
     } else {
-      return toAbsoluteUrl("/media/logos/logo-light.png");
+      return toAbsoluteUrl("/media/logos/kemenpora.png");
     }
   }
 

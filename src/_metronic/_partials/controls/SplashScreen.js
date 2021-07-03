@@ -6,11 +6,10 @@ export function SplashScreen() {
   return (
     <>
       <div className="splash-screen">
-        {/* <img
-          src={toAbsoluteUrl("/media/logos/logo-mini-md.png")}
-          alt="Metronic logo"
-        /> */}
-        <p>SIKOLA</p>
+        <img
+          src={toAbsoluteUrl("/media/logos/kemenpora.png")}
+          alt="SIKOLA"
+        />
         <CircularProgress className="splash-screen-spinner" />
       </div>
     </>
