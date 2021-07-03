@@ -117,7 +117,7 @@ function getChartOption(layoutProps) {
             colors: [layoutProps.colorsThemeBaseSuccess]
         },
         xaxis: {
-            categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+            categories: ["Febuari", "Maret", "April", "Mei", "Juni", "Juli"],
             axisBorder: {
                 show: false
             },

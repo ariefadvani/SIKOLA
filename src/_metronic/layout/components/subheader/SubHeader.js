@@ -79,7 +79,7 @@ export function SubHeader() {
               <span className="text-muted font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title">Hari Ini</span>
               <span className="text-primary font-weight-bold" id="kt_dashboard_daterangepicker_date">6 Juli 2021</span>
             </a>
-            <QuickActions/>
+            {/* <QuickActions/> */}
           </div>
         </div>
       </div>

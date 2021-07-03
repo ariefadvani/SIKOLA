@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSubheader } from "../../../_metronic/layout";
 import { Container, Row, Col, Table, Form, Button, Popover, OverlayTrigger, ButtonToolbar, ListGroup, Modal } from 'react-bootstrap'
 import {
@@ -51,11 +51,69 @@ export const MOU = () => {
     const classes = useStyles();
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
+    const [dataMou, setDatamou] = useState([
+        {
+            "no": "1",
+            "mitra": "Forum Sekolah Sepakbola Indonesia (FOSSBI) Pusat",
+            "unitKerja": "Asdep Ordik",
+            "bidangKerjasama": "Olahraga",
+            "namaPerjanjian": "Mou Liga Berjenjang U-12",
+            "tempatPenandatanganan": "Gd. PPITKON Lt. 2 Kemenpora",
+            "tanggalPenandatanganan": "8 Juli 2019",
+            "statusPerjanjian": "8 Juli - 31 Desember 2019 Cara Pengakhiran : Memberikan Laporan Pertanggungjawaban Keuangan dan Kegiatan",
+            "bidangImplementasi": "Olahraga",
+            "jenisImplementasi": "Penyelenggaraan Liga Berjenjang U-12",
+            "keterangan": "PKS sudah tidak berlaku ",
+            "namaDokumen": ""
+        },
+        {
+            "no": "2",
+            "mitra": "Badan Liga Sepakbola Pelajar Indonesia (BLISPI)",
+            "unitKerja": "Asdep Ordik",
+            "bidangKerjasama": "Olahraga",
+            "namaPerjanjian": "Mou Liga Berjenjang U-14",
+            "tempatPenandatanganan": "Gd. PPITKON Lt. 2 Kemenpora",
+            "tanggalPenandatanganan": "8 Juli 2019",
+            "statusPerjanjian": "8 Juli - 31 Desember 2019 Cara Pengakhiran : Memberikan Laporan Pertanggungjawaban Keuangan dan Kegiatan",
+            "bidangImplementasi": "Olahraga",
+            "jenisImplementasi": "Penyelenggaraan Liga Berjenjang U-14",
+            "keterangan": "PKS sudah tidak berlaku",
+            "namaDokumen": ""
+        },
+        {
+            "no": "3",
+            "mitra": "Manajemen Kompetisi (MK)",
+            "unitKerja": "Asdep Ordik",
+            "bidangKerjasama": "Olahraga",
+            "namaPerjanjian": "Mou Liga Berjenjang U-16",
+            "tempatPenandatanganan": "Gd. PPITKON Lt. 2 Kemenpora",
+            "tanggalPenandatanganan": "8 Juli 2019",
+            "statusPerjanjian": "8 Juli - 31 Desember 2019 Cara Pengakhiran : Memberikan Laporan Pertanggungjawaban Keuangan dan Kegiatan",
+            "bidangImplementasi": "Olahraga",
+            "jenisImplementasi": "Penyelenggaraan Liga Berjenjang U-16",
+            "keterangan": "PKS sudah tidak berlaku",
+            "namaDokumen": ""
+        },
+        {
+            "no": "4",
+            "mitra": "UNIVERSITAS SRIWIJAYA",
+            "unitKerja": "Sekertaris Mentri",
+            "bidangKerjasama": "Olahraga",
+            "namaPerjanjian": "INTEGRASI PROGRAM POLITEKNIK OLAHRAGA INDONESIA",
+            "tempatPenandatanganan": "Gd. PPITKON Lt. 2 Kemenpora",
+            "tanggalPenandatanganan": "8 Juli 2019",
+            "statusPerjanjian": "8 Juli - 31 Desember 2019 Cara Pengakhiran : Memberikan Laporan Pertanggungjawaban Keuangan dan Kegiatan",
+            "bidangImplementasi": "Program Olahraga",
+            "jenisImplementasi": "INTEGRASI PROGRAM POLITEKNIK OLAHRAGA INDONESIA",
+            "keterangan": "PKS sudah tidak berlaku",
+            "namaDokumen": "PKS Kemenpora Unsri"
+        }
+    ])
 
     const handleClose = () => setShow(false);
     const handleClose2 = () => setShow2(false);
     const handleShow = () => setShow(true);
-    const handleDocument = () => {}
+    const handleDocument = () => { }
 
     function alertClicked() {
         alert('You clicked the third ListGroupItem');
@@ -71,33 +129,46 @@ export const MOU = () => {
                         <tr>
                             <th>#</th>
                             <th>Nama Mitra</th>
-                            <th>Judul MOU</th>
-                            <th>Periode</th>
-                            <th>Lingkup Kegiatan</th>
-                            <th>Nilai Kontrak (Rp)</th>
+                            <th>Unit Kerja</th>
+                            <th>Bidang Kerjasama</th>
+                            <th>Nama Perjanjian</th>
+                            <th>Tempat Penandatanganan</th>
+                            <th>Tanggal Penandatanganan</th>
                             {/* <th>Nilai Yang Sudah Digunakan (Rp)</th> */}
-                            <th>Nama dan Unit Tim Pelaksana (PIC)</th>
-                            <th>Hasil</th>
+                            <th>Status Perjanjian</th>
+                            <th>Bidang Implementasi</th>
+                            <th>Jenis Implementasi</th>
+                            <th>Keterangan</th>
+                            <th>Output</th>
                             <th>Action</th>
                             {/* <th>Prosentase Kemajuan Kegiatan</th> */}
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>KONI PUSAT</td>
-                            <td>Kegiatan Olahraga</td>
-                            <td>2021 - 2022</td>
-                            <td>Pertandingan Bola Antar Pelajar</td>
-                            <td>Rp 300.000.000</td>
-                            {/* <td>Rp 50.000.000</td> */}
-                            <td>Asisten Deputi 3</td>
-                            <td><a href="#">Dokumen 1</a></td>
-                            <td>
-                                <Button onClick={() => setShow2(true)} variant="primary">...</Button>
-                            </td>
-                            {/* <td>40%</td> */}
-                        </tr>
+                        {
+                            console.log('lihat data', dataMou)
+                        }
+                        {
+                            dataMou.map((value, index) => (
+                                <tr key={index}>
+                                    <td>{value.no}</td>
+                                    <td>{value.mitra}</td>
+                                    <td>{value.unitKerja}</td>
+                                    <td>{value.bidangKerjasama}</td>
+                                    <td>{value.namaPerjanjian}</td>
+                                    <td>{value.tempatPenandatanganan}</td>
+                                    <td>{value.tanggalPenandatanganan}</td>
+                                    <td>{value.statusPerjanjian}</td>
+                                    <td>{value.bidangImplementasi}</td>
+                                    <td>{value.jenisImplementasi}</td>
+                                    <td>{value.keterangan}</td>
+                                    <td><a href="#">{value.namaDokumen}</a></td>
+                                    <td>
+                                        <Button onClick={() => setShow2(true)} variant="primary">...</Button>
+                                    </td>
+                                </tr>
+                            ))
+                        }
                     </tbody>
                 </Table>
             </Notice>
@@ -129,37 +200,36 @@ export const MOU = () => {
                                     <Form.Control type="" placeholder="Nama Mitra" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nomer MOU</Form.Label>
-                                    <Form.Control type="" placeholder="No. MOU" />
+                                    <Form.Label>Unit Kerja</Form.Label>
+                                    <Form.Control type="" placeholder="Unit Kerja" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Judul MOU</Form.Label>
-                                    <Form.Control type="" placeholder="Judul MOU" />
+                                    <Form.Label>Bidang Kerjasama</Form.Label>
+                                    <Form.Control type="" placeholder="Bidang Kerjasama" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Lingkup Kegiatan</Form.Label>
-                                    <Form.Control type="" placeholder="Lingkup Kegiatan" />
+                                    <Form.Label>Nama Perjanjian</Form.Label>
+                                    <Form.Control type="" placeholder="Nama Perjanjian" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlSelect1">
-                                    <Form.Label>Periode Kerjasama</Form.Label>
-                                    <Form.Control as="select">
-                                        <option>2020 - 2021</option>
-                                        <option>2021 - 2022</option>
-                                        <option>2022 - 2023</option>
-                                        <option>2023 - 2024</option>
-                                    </Form.Control>
+                                    <Form.Label>Tempat Penandatanganan</Form.Label>
+                                    <Form.Control type="" placeholder="Tempat Penandatanganan" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nama PIC</Form.Label>
-                                    <Form.Control type="" placeholder="Nama PIC" />
+                                    <Form.Label>Tanggal Penandatanganan</Form.Label>
+                                    <Form.Control type="" placeholder="Tanggal Penandatanganan" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nilai Kerjasama (Rp)</Form.Label>
-                                    <Form.Control type="" placeholder="Nilai Kerjasama (Rp)" />
+                                    <Form.Label>Status Perjanjian</Form.Label>
+                                    <Form.Control type="" placeholder="Status Perjanjian" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Sumber Pendanaan</Form.Label>
-                                    <Form.Control type="" placeholder="Sumber Pendanaan" />
+                                    <Form.Label>Bidang Implementasi</Form.Label>
+                                    <Form.Control type="" placeholder="Bidang Implementasi" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Jenis Implementasi</Form.Label>
+                                    <Form.Control type="" placeholder="Jenis Implementasi" />
                                 </Form.Group>
                             </Form>
                         </Col>
@@ -213,47 +283,47 @@ export const MOU = () => {
                                     <Form.Control type="" placeholder="Nama Mitra" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nomer MOU</Form.Label>
-                                    <Form.Control type="" placeholder="No. MOU" />
+                                    <Form.Label>Unit Kerja</Form.Label>
+                                    <Form.Control type="" placeholder="Unit Kerja" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Judul MOU</Form.Label>
-                                    <Form.Control type="" placeholder="Judul MOU" />
+                                    <Form.Label>Bidang Kerjasama</Form.Label>
+                                    <Form.Control type="" placeholder="Bidang Kerjasama" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Lingkup Kegiatan</Form.Label>
-                                    <Form.Control type="" placeholder="Lingkup Kegiatan" />
+                                    <Form.Label>Nama Perjanjian</Form.Label>
+                                    <Form.Control type="" placeholder="Nama Perjanjian" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlSelect1">
-                                    <Form.Label>Periode Kerjasama</Form.Label>
-                                    <Form.Control as="select">
-                                        <option>2020 - 2021</option>
-                                        <option>2021 - 2022</option>
-                                        <option>2022 - 2023</option>
-                                        <option>2023 - 2024</option>
-                                    </Form.Control>
+                                    <Form.Label>Tempat Penandatanganan</Form.Label>
+                                    <Form.Control type="" placeholder="Tempat Penandatanganan" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nama PIC</Form.Label>
-                                    <Form.Control type="" placeholder="Nama PIC" />
+                                    <Form.Label>Tanggal Penandatanganan</Form.Label>
+                                    <Form.Control type="" placeholder="Tanggal Penandatanganan" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Nilai Kerjasama (Rp)</Form.Label>
-                                    <Form.Control type="" placeholder="Nilai Kerjasama (Rp)" />
+                                    <Form.Label>Status Perjanjian</Form.Label>
+                                    <Form.Control type="" placeholder="Status Perjanjian" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Sumber Pendanaan</Form.Label>
-                                    <Form.Control type="" placeholder="Sumber Pendanaan" />
+                                    <Form.Label>Bidang Implementasi</Form.Label>
+                                    <Form.Control type="" placeholder="Bidang Implementasi" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Upload Dokumen</Form.Label>
-                                    <Button className="ml-10" onClick={handleClose}>+</Button>
+                                    <Form.Label>Jenis Implementasi</Form.Label>
+                                    <Form.Control type="" placeholder="Jenis Implementasi" />
                                 </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Keterangan</Form.Label>
+                                    <Form.Control type="" placeholder="Keterangan" />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlInput1">
+                                <Form.Label>Upload Dokumen</Form.Label>
+                                <Button className="ml-10" onClick={handleClose}>+</Button>
+                            </Form.Group>
                             </Form>
                         </Col>
-                    </Row>
-                    <Row>
-
                     </Row>
                     <Row className={'mt-10'}>
                         {/* <Col>
